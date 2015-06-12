@@ -10,11 +10,11 @@ var User = Backbone.Model.extend({
     }
 });
 
-var UserFormCollection = Backbone.Collection.extend({
+var UserCollection = Backbone.Collection.extend({
     model: User,
-    url:'http://tiny-lasagna-server.herokuapp.com/collections/b_user_form'
+    url:'http://tiny-lasagna-server.herokuapp.com/collections/kyleBlog'
 });
 
 console.log(User);
 
-export default { Post, Post}
+export default { User, UserCollection};

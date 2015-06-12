@@ -12,6 +12,6 @@ import {PostCollection} from './a/models/post';
     var form = new PostView({collection: post});
     console.log(form.$el.children());
 
-    $('#app').html(form.el);
+  $('#app').html(form.el);
   });
 })();
