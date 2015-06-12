@@ -1,9 +1,17 @@
+import PostView from './a/view/index';
+import {PostCollection} from './a/models/post';
+
 (function(){
-  'use strict' ;
+  'use strict';
 
   $(document).ready(function(){
-    $('body').prepend(JST.application());
+
+    var post = new PostCollection();
+    console.log(post);
+
+    var form = new PostView({collection: post});
+    console.log(form.$el.children());
+
+    $('#app').html(form.el);
   });
-
-
 })();
