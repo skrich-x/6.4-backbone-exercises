@@ -1,6 +1,7 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
+/* @import 'form'; */
 // Typography
 $base-font-family: $helvetica;
 
@@ -19,6 +20,7 @@ body {
   background-color: RGBA(192, 225, 229, 1);
   color: $base-font-color;
 }
+
 
 html{
   @include outer-container (1200px);

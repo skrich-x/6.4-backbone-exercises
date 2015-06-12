@@ -1,8 +1,8 @@
 export default Backbone.View.extend({
   tagName: 'form',
-  ClassName: "form-title",
+  className: "post-form",
 
-  template: JST.form,
+  template: JST.a.index,
 
   events: {
     'click .form-submit': 'addPost',
@@ -13,17 +13,17 @@ export default Backbone.View.extend({
   },
 
   render: function(){
+    $('body').prepend(this.$el);
     this.$el.html(this.template(this.collection.toJSON()));
   },
 
   addPost: function(e){
-    console.log('submitting');
     e.preventDefault();
     var title = this.$('.form-title').val();
     var blog = this.$('.form-input').val();
     this.collection.create({
       title: title,
-      blog:blog
+      blog: blog
     });
 
   }

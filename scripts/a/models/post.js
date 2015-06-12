@@ -8,8 +8,8 @@ var Post = Backbone.Model.extend({
   }
 });
 
-varPostCollection = Backbone.Collection.extend({
-    model:Post,
+var PostCollection = Backbone.Collection.extend({
+    model: Post,
     url:'http://tiny-lasagna-server.herokuapp.com/collections/kyleBlog'
 });
 
