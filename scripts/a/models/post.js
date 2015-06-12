@@ -1,15 +1,18 @@
 var Post = Backbone.Model.extend({
-  urlRoot:'http://tiny-lasagna-server.herokuapp.com/collections/blog',
   idAttribute: '_id',
 
-  defaults: {
-
-    title: 'title',
-    body: 'body'
-  },
-
-
+  defaults: function() {
+    title: '';
+    body: '';
+    created_at: new Date();
+  }
 });
+
+varPostCollection = Backbone.Collection.extend({
+    model:Post,
+    url:'http://tiny-lasagna-server.herokuapp.com/collections/kyleBlog'
+});
+
 console.log(Post);
 
-export default Post;
+export default {Post, PostCollection};
