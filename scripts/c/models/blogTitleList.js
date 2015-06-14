@@ -8,7 +8,7 @@ var List = Backbone.Model.extend({
 });
 
 var ListCollection = Backbone.Collection.extend({
-  model: Post,
+  model: List,
   url:'http://tiny-lasagna-server.herokuapp.com/collections/kyleBlog'
 });
 

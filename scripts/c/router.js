@@ -1,6 +1,7 @@
 import IndexView from './view/index';
 import BlogView from './view/blogview';
-import {ListCollection} from './models/blogTitleList';
+import {List, ListCollection} from './models/blogTitleList';
+import {Blog, BlogCollections} from './models/post';
 
 console.log(IndexView);
 
@@ -13,7 +14,8 @@ var Router = Backbone.Router.extend({
 
 
   initialize:function(){
-    this.index = new BlogCollection();
+    this.blogs = new BlogCollections();
+    console.log(this);
   },
 
   index: function() {

@@ -1,4 +1,4 @@
-import Router from './router';
+import Router from './c/router';
 
 (function(){
   'use strict';
