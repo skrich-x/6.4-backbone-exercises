@@ -1,7 +1,7 @@
 var List = Backbone.Model.extend({
   idAttribute: '_id',
 
-  defaults:{    
+  defaults:{
     'title': '',
   },
 
@@ -12,6 +12,6 @@ var ListCollection = Backbone.Collection.extend({
   url:'http://tiny-lasagna-server.herokuapp.com/collections/kyleBlog'
 });
 
-console.log(List);
+console.log("working");
 
 export default {List, ListCollection};

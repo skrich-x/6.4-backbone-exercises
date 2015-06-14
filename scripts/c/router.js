@@ -1,29 +1,35 @@
-var AppRouter = Backbone.Router.extend({
+import IndexView from './view/index';
+import BlogView from './view/blogview';
+import {ListCollection} from './models/blogTitleList';
 
+console.log(IndexView);
+
+
+var Router = Backbone.Router.extend({
   routes: {
     '': 'index',
     'blog': 'blog'
-
-
   },
+
+
   initialize:function(){
     this.index = new BlogCollection();
-    this.blog = new
-
-
   },
 
-index: function() {
-    $('#app').html();
-},
+  index: function() {
+      var view = new IndexView({ collection:this.blogTitleList});
+      $('#app').html(view.el);
+      console.log(view.$el.children());
+  },
 
-  blog: function(){
-
+  displayBlog: function(){
+    $('#app').html(JST.blogview());
   }
 
 
 });
 
+var router = new Router();
 export default router;
 
 
