@@ -1,37 +1,30 @@
-// var AppRouter = Backbone.Router.extend({
-//   routes: {
-//     '':''
-//   },
-//
-//   routes: {
-//     '': 'index',
-//     'blog': 'blog'
-//
-//
-//   }
-//   initialize:function(){
-//     this.index = new BlogCollection();
-//     this.blog = new
-//
-//
-//   },
-//
-//
-//
-// })
+var AppRouter = Backbone.Router.extend({
+
+  routes: {
+    '': 'index',
+    'blog': 'blog'
 
 
+  },
+  initialize:function(){
+    this.index = new BlogCollection();
+    this.blog = new
 
 
+  },
+
+index: function() {
+    $('#app').html();
+},
+
+  blog: function(){
+
+  }
 
 
+});
 
-
-
-
-
-
-
+export default router;
 
 
 
