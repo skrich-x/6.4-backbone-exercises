@@ -1,8 +1,10 @@
 export default Backbone.View.extend({
+  template: JST.c.index,
+
   tagName: 'ul',
   className: 'blog-list',
 
-  template: JST.c.index,
+
 
   events: {
     'click .title-click' : 'clickPost',
