@@ -17,6 +17,7 @@ export default Backbone.Router.extend({
     //
     this.posts = new PostCollection();
     this.posts.fetch();
+    this.fetchPostsPromise = this.posts.fetch();
 
     this.indexView = new IndexView({collection: this.posts});
     $('#sidebar').html(this.indexView.el);
@@ -29,8 +30,12 @@ export default Backbone.Router.extend({
 
   show: function(id){
     console.log(id);
-    var post = this.posts.get(id);
-    this.showView(new PostShowView({model: post}));
+    // var post = this.posts.get(id);
+    // this.showView(new PostShowView({model: post}));
+    this.fetchPostsPromise.then(function(){
+      var post = this.posts.get(id);
+      this.showView(new PostShowView ({model:post}));
+    }.bind(this));
   },
 
   showView:function(view){
